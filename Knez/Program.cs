@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 
 namespace Knez {
 	internal class Program {
-		private static int _tempo = 2000;
-		private static int COUNTDOWN_TIMER = 1;
+		private static int _tempo = 200;
+		private static int COUNTDOWN_TIMER = 6;
 
 		public static int Tempo {
-			get { return _tempo < 0 ? 0 : _tempo; }
-			set { _tempo = value; }
+			get => _tempo < 0 ? 0 : _tempo;
+			set => _tempo = value;
 		}
 
 		private static void Main(string[] args) {
@@ -20,6 +20,7 @@ namespace Knez {
 			Console.WriteLine("Welcome to Knez.exe!");
 			Console.WriteLine("To increase or decrease tempo press [+] or [-] key.");
 			Console.WriteLine("To display current tempo press [T] key.");
+			Console.WriteLine("To start playing strofa press [S] key.");
 			Console.WriteLine("To terminate program.....you cannot terminate Knez!");
 
 			Countdown();
